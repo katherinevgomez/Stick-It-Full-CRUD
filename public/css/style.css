@@ -46,5 +46,11 @@ div {
     margin: auto;  
 }
 
+span div {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 
 
