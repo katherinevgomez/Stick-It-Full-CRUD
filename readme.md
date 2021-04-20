@@ -12,7 +12,7 @@
 - Javascript, HTML, CSS, EJS, Mongoose, MongoDB, BULMA
 
 # Getting Started
-- Click here and sign up to start storing your notes
+- Click here https://stick-it-full-crud.herokuapp.com/ and sign up to start storing your notes
 
 # Next Steps
 - Work on the styling so the notes appear next to each other in rows of three
