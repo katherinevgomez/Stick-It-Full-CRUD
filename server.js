@@ -14,10 +14,11 @@ const cors = require("cors");
 const PORT = process.env.PORT || "2021";
 const SECRET = process.env.SECRET || "secret"
 const HomeRouter = require("./routes/home.js");
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb://localhost:27017/practice"
 // Sessions Middleware
 const session = require("express-session"); // create session cookies
 const connect = require("connect-mongodb-session")(session) // store cookies in mongo
-
+// mongoose.connect(MONGO, () => console.log("connected to mongo"))
 /////////////////////////////////////
 // Create Express Application Object
 /////////////////////////////////////
