@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("../partials/head") %>
+
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("../partials/header") %>
+    <main>
+      <h2 class="subtitle is-2">Notes</h2>
+      <a href="/dashboard">Go Back</a>
+      <br/><br/>
+      <h4 class="title is-3"><%= note.text %></h4>
+
+      <form action="/notes/<%= note._id %>?_method=PUT" method="post">
+        <input
+          class="textarea"
+          type="text"
+          name="text"
+          placeholder="new note"
+          value="<%= note.text %>"
+        />
+        <input class="button" type="submit" value="Edit Note" />
+      </form>
+
+      <form action="/notes/<%= note._id %>?_method=delete" method="post">
+        <input class="button" type="submit" value="Delete note" />
+      </form>
+    </main>
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("../partials/footer") %>
+  </body>
+</html>

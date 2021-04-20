@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("partials/head") %>
+
+    <body>
+        <!-- THE HEADER TAG PARTIAL -->
+        <%- include("partials/header") %>
+        <main>
+            <p>
+                Welcome to Stick It, a place to store your game dev notes!
+                <br/><br/>
+                Sign up or Log in to start adding notes.
+            </p>
+            <br/><br/>
+            <a href="/auth/signup"><button class="button">Signup</button></a>
+            <a href="/auth/login"><button class="button">Login</button></a>
+
+        </main>
+        <!-- THE HEAD TAG PARTIAL -->
+        <%- include("partials/footer") %>
+    </body>
+</html>

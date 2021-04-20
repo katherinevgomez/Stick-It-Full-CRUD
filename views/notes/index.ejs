@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("../partials/head") %>
+
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("../partials/header") %>
+    <main>
+      <h2 class="subtitle is-2">Game Dev Notes</h2>
+      <a href="/dashboard">Go Back</a>
+      <br/><br/>
+      <% for (note of notes) { %>
+
+        <div class="flex-container"><a href="/notes/<%= note._id %>"><h4><%= note.text %></h4></a></div>
+        <div class="flex-container"><a href="/notes/<%= note._id %>"> <img src= "<%= note.img %>"></a></div>
+        
+
+      <% } %>
+      
+
+      <form action="/notes/" method="post">
+        <input
+          class="textarea"
+          type="text"
+          name="text"
+          placeholder="New Note"
+        />
+
+        <input class="button" type="submit" value="Create Note" />
+      </form>
+      <br/>
+      <form action="/notes/" method="post">
+        <input
+          class="text"
+          type="text"
+          name="img"
+          placeholder="New Image"
+        />
+        <input class="button" type="submit" value="Post Image" />
+      </form>
+    </main>
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("../partials/footer") %>
+  </body>
+</html>
